@@ -1,0 +1,51 @@
+<div class="login-form">
+  <mat-card>
+    <mat-card-title translate="TITLE"></mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <p>
+          <mat-form-field>
+            <input
+              type="text"
+              name="username"
+              matInput
+              placeholder="{{ 'USERNAME' | translate }}"
+              formControlName="username"
+            />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input
+              type="password"
+              name="password"
+              matInput
+              placeholder="{{ 'PASSWORD' | translate }}"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+
+        <div *ngIf="hasError" class="error-message">
+          <span class="mat-error" translate="INVALID_ERROR_MESSAGE"></span>
+        </div>
+
+        <div class="button">
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!loginForm.valid"
+            type="submit"
+            translate="LOGIN_BUTTON"
+          ></button>
+        </div>
+      </form>
+    </mat-card-content>
+    <div>
+      <button (click)="setEnLanguage()">EN</button>
+      <button (click)="setSkLanguage()">SK</button>
+    </div>
+  </mat-card>
+
+</div>

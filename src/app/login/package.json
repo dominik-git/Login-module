@@ -1,0 +1,22 @@
+//{
+//  "es2015": "dist\\fesm2015\\bit-dominik-git.login.login.js",
+//  "esm2015": "dist\\esm2015\\bit-dominik-git.login.login.js",
+//  "fesm2015": "dist\\fesm2015\\bit-dominik-git.login.login.js",
+//  "module": "dist\\fesm2015\\bit-dominik-git.login.login.js",
+//  "typings": "dist\\bit-dominik-git.login.login.d.ts",
+//  "metadata": "dist\\bit-dominik-git.login.login.metadata.json"
+//}
+
+
+{
+
+  "name": "@my/foo",
+  "version": "1.0.0",
+  "ngPackage": {
+    "$schema": "../../../node_modules/ng-packagr/package.schema.json",
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../../dist/login"
+  }
+}
